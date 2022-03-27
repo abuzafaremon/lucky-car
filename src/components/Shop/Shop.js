@@ -7,13 +7,17 @@ const Shop = () => {
   useEffect( ()=>{
     fetch('cars.json')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => setCars(data))
   },[])
 
   return (
     <div className='shop-container'>
       <div className="cars-container">
-        <h2>Cars Container</h2>
+        {
+          cars.map(car => <Car key={car.id}
+          car={car}
+          ></Car>)
+        }
       </div>
       <div className="cart-container">
         <h2>This is cart</h2>

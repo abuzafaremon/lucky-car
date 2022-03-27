@@ -1,0 +1,9 @@
+.car{
+  border: 2px solid seagreen;
+  padding: 10px;
+  border-radius: 10px;
+}
+.car img{
+  width: 100%;
+  border-radius: 10px;
+}

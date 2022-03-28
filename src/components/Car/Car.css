@@ -1,9 +1,29 @@
 .car{
-  border: 2px solid seagreen;
+  height: 200px;
+  border: 2px solid aqua;
   padding: 10px;
   border-radius: 10px;
+  position: relative;
 }
 .car img{
   width: 100%;
   border-radius: 10px;
+}
+.car .car-info{
+  position: absolute;
+  bottom: 40px;
+}
+.car .cart-btn{
+  background-color: aqua;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+.car .cart-btn:hover{
+  background-color: #00d6d6;
+  transition: .5s;
 }

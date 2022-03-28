@@ -1,11 +1,16 @@
 .shop-container{
   display: grid;
   grid-template-columns: 4fr 1fr;
-  margin-top: 20px;
+  margin: 20px 20px;
   grid-gap: 20px;
 }
 .cars-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
+}
+.cart-container{
+  background-color: aqua;
+  position: sticky;
+  top: 0;
 }

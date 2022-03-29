@@ -1,5 +1,6 @@
 .car{
-  height: 200px;
+  width: 200px;
+  height: 250px;
   border: 2px solid aqua;
   padding: 10px;
   border-radius: 10px;
@@ -14,6 +15,10 @@
   bottom: 40px;
 }
 .car .cart-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   background-color: aqua;
   width: 100%;
   padding: 10px;
@@ -24,6 +29,6 @@
   border-radius: 0 0 10px 10px;
 }
 .car .cart-btn:hover{
-  background-color: #00d6d6;
+  background-color: #00e6e6;
   transition: .5s;
 }

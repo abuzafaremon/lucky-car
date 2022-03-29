@@ -11,6 +11,21 @@
 }
 .cart-container{
   background-color: aqua;
-  position: sticky;
-  top: 0;
+  padding: 10px;
+}
+@media screen and (max-width:767px) {
+  .shop-container{
+    grid-template-columns: 2fr 1fr;
+  }
+  .cars-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:500px) {
+  .shop-container{
+    grid-template-columns: 2fr 1fr;
+  }
+  .cars-container{
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,4 +1,27 @@
-.cart-info{
-  position: sticky;
-  top: 0;
+.selected-car{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-radius: 20px 0 20px 0;
+  padding: 5px;
+}
+.selected-car img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.selected-car button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+}
+.selected-car .icon{
+  color: red;
+  font-size: 16px;
 }

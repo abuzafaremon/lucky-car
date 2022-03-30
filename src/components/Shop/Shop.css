@@ -22,12 +22,14 @@
   top: 0;
   padding: 10px;
 }
+.random-car-cont{
+  border: 2px solid green;
+  margin-bottom: 10px;
+}
 .random-car{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
-  border: 2px solid green;
   padding: 5px;
 }
 .random-car img{
@@ -62,16 +64,14 @@
   color: white;
   transition: .2s;
 }
-.btn-group .choose-again-btn{
+.choose-again-btn{
+  width: 100%;
+  padding: 3px;
   background-color: transparent;
   border: 1px solid purple;
   border-radius: 10px 0 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 }
-.btn-group .choose-again-btn:hover{
+.choose-again-btn:hover{
   background-color: purple;
   color: white;
   transition: .2s;

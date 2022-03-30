@@ -4,7 +4,7 @@ import { faTrash} from '@fortawesome/free-solid-svg-icons';
 import './Cart.css'
 
 const Cart = ({car}) => {
-  const {name, thumb, price,id}=car;
+  const {name, thumb, price}=car;
   
   return (
         <div className="selected-car">

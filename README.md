@@ -1,10 +1,8 @@
-# Getting Started with Create React App
+# Lucky One Zafaremon20
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Live Website Link](https://lucky-car-emon.netlify.app/)
 
-## Available Scripts
-
-In the project directory, you can run:
+This is a lucky car chooser website. You select multiple product in your cart. And by clicking "choose 1 for me" you will get a random lucky car for you.
 
 ### `npm start`
 

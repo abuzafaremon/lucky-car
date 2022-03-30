@@ -4,3 +4,10 @@
 .site-title{
   color: darkblue;
 }
+.site-sub-title{
+  color: yellow;
+  background-color: darkblue;
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 0 10px 0 10px;
+}

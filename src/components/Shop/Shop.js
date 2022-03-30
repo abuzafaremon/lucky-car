@@ -10,7 +10,6 @@ const Shop = () => {
   const [cart, setCart] = useState([]);
   const[randomCar, setRandomCar] = useState({});
   // console.log(randomCar)
-
   useEffect( ()=>{
     fetch('cars.json')
     .then(res => res.json())
@@ -23,8 +22,6 @@ const Shop = () => {
       if(cart.length <= 3 && cart.indexOf(car)=== -1){
         const newCart = [...cart, car];
         
-        // const addedCar = newCart.map(car => car.id);
-        
         setCart(newCart);
       }
   }
@@ -32,9 +29,17 @@ const Shop = () => {
    const randomCarNum = Math.floor(Math.random()* cart.length);
    const randomCar = (cart[randomCarNum]);
    setRandomCar(randomCar);
+    let emptyCart = cart;
+    emptyCart = [];
+    setCart(emptyCart);
   }
 
-  
+  const chooseAgain = () => {
+   
+   let emptyCart2 = randomCar; 
+   emptyCart2 = [];
+   setRandomCar(emptyCart2)
+  }
 
   return (
     <div className='shop-container'>
@@ -57,20 +62,28 @@ const Shop = () => {
             car={car}
             ></Cart>)
         }
-        {Object.keys(randomCar).length>0 && (<div className='random-car'>
-          <img src={randomCar.thumb} alt="" />
-          <div>
-          <h4>{randomCar.name}</h4>
-          <h6>Price: {randomCar.price}</h6>
-          </div>
-          <FontAwesomeIcon className='icon' icon={faCheck}></FontAwesomeIcon>
-        </div>)}
+        {Object.keys(randomCar).length>0 && (
+            <div>
+              <div className='random-car-cont'>
+                <h4>This is for you.</h4>
+                <hr style={{border: '1px solid green'}} />
+                <div className='random-car'>
+                <img src={randomCar.thumb} alt="" />
+                <div>
+                <h4>{randomCar.name}</h4>
+                <h6>Price: {randomCar.price}</h6>
+                </div>
+                <FontAwesomeIcon className='icon' icon={faCheck}></FontAwesomeIcon>
+                </div>
+              </div>
+              <button onClick={chooseAgain} className='choose-again-btn'>
+                  <p>Choose Again</p>
+              </button>
+            </div>
+        )}
         {Object.keys(cart).length>3 && (<div className="btn-group">
           <button onClick={chooseOne} className='choose-btn'>Choose 1 for me</button>
           <br />
-          <button className='choose-again-btn'>
-            <p>Choose Again</p>
-          </button>
         </div>)}
         </div>
       </div>
